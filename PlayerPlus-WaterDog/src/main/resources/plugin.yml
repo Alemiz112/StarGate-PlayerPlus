@@ -1,0 +1,7 @@
+name: "StarGate-PlayerPlus"
+version: 1.0.0
+author: "Alemiz"
+description: "Addon for StarGate-Universe. Adds some packets for getting players info"
+main: alemiz.waterdog.playerplus.PlayerPlus
+softdepend: [StarGate]
+depends: [StarGate]

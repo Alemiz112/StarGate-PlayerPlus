@@ -1,0 +1,8 @@
+name: "StarGate-PlayerPlus"
+version: 1.0.0
+author: "Alemiz"
+description: "Addon for StarGate-Universe. Adds some packets for getting players info"
+depend:
+  - StarGate-Universe
+main: alemiz.nukkit.playerplus.PlayerPlus
+api: ["1.0.0"]
