@@ -4,6 +4,7 @@ package alemiz.waterdog.playerplus.packets;
 import alemiz.stargate.gate.packets.StarGatePacket;
 import alemiz.stargate.untils.gateprotocol.Convertor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PlayerOnlineList extends StarGatePacket {
@@ -13,7 +14,7 @@ public class PlayerOnlineList extends StarGatePacket {
         super("PLAYER_ONLINE_LIST", Packets.PLAYER_ONLINE_LIST);
     }
 
-    public List<String> players;
+    public List<String> players = new ArrayList<String>();
 
     @Override
     public void decode() {
@@ -21,9 +22,9 @@ public class PlayerOnlineList extends StarGatePacket {
 
         String[] data = Convertor.getPacketStringData(encoded);
 
-        for (int i = 1; i < data.length; i++){
+        for (int i = 1; i+1 < data.length; i++){
             /* Add Player to list*/
-            players.add(data[1]);
+            players.add(data[i]);
         }
     }
 

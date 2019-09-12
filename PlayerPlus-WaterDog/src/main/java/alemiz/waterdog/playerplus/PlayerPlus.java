@@ -49,7 +49,7 @@ public class PlayerPlus extends Plugin implements Listener {
                 for (String player : playerOnlineList.players){
                     ProxiedPlayer guest = getProxy().getPlayer(player);
 
-                    if (guest == null){
+                    if (guest == null || !guest.isConnected()){
                         result += player+"/false"+";";
                     }else {
                         result += player+"/true"+";";
